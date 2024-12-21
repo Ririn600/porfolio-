@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/title>
+    <style>
+        /* Reset default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Set background with a smooth gradient */
+        body {
+            background-image: url(itachi.jpeg);*/
+            background-repeat: no repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+            background-size: cover;
+        }
+
+        /* Login container style */
+        .login-container {
+            background: rgba(0, 0, 0, 0.6); /* Semi-transparent dark background */
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+            width: 380px;
+            text-align: center;
+        }
+
+        /* Title style */
+        h1 {
+            color: #5f0c0c; /* Gold color */
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            font-family: 'Playfair Display', serif;
+            text-transform: uppercase;
+        }
+
+        /* Form input fields */
+        .input-group {
+            margin-bottom: 20px;
+            text-align: left;
+            position: relative;
+        }
+
+        .input-group label {
+            font-size: 14px;
+            color: #fff;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 15px 15px 15px 40px; /* Adding space for the icon inside input */
+            font-size: 16px;
+            border: 1px solid #530e05;
+            border-radius: 6px;
+            outline: none;
+            background: rgba(255, 255, 255, 0.2); /* Transparent background */
+            color: #fff;
+            transition: 0.3s;
+        }
+
+        .input-group input:focus {
+            background: rgba(255, 255, 255, 0.3);
+            border-color: #4d0803;
+        }
+
+        /* Icons for user and password, placed to the left */
+        .input-group .icon {
+            position: absolute;
+            left: 10px; /* Move icon to the left */
+            top: 50%;
+            transform: translateY(-50%);
+            color: #fdf6f4;
+        }
+
+        /* Login button */
+        .login-btn {
+            background-color: #470804;
+            color: white;
+            border: none;
+            padding: 15px;
+            font-size: 18px;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+
+        .login-btn:hover {
+            background-color: #5e0c06;
+        }
+
+        /* "Lupa Password?" section */
+        .forgot-password {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #fff;
+        }
+
+        .forgot-password a {
+            color: #61dafb; /* Light blue for the link */
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .forgot-password a:hover {
+            color: #4d0906; /* Gold color on hover */
+        }
+
+        /* "Belum punya akun? Daftar sekarang" section */
+        .signup-link {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #fff;
+        }
+
+        .signup-link a {
+            color: #61dafb; /* Light blue color for the link */
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .signup-link a:hover {
+            color: #800505; /* Gold color on hover */
+        }
+
+        /* Add custom font import */
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap');
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Login</h1>
+        <form class="login-form">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <i class="icon">&#128100;</i> <!-- User Icon placed on the left -->
+                <input type="text" id="username" name="username" placeholder="Masukkan Username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <i class="icon">&#128273;</i> <!-- Lock Icon placed on the left -->
+                <input type="password" id="password" name="password" placeholder="Masukkan Password" required>
+            </div>
+            <button type="submit" class="login-btn">Login</button>
+        </form>
+
+        <!-- Lupa password? link -->
+        <div class="forgot-password">
+            <p><a href="#">Lupa password?</a></p>
+        </div>
+
+        <!-- Belum punya akun? Daftar sekarang link -->
+        <div class="signup-link">
+            <p>Belum punya akun? <a href="#">Daftar sekarang</a></p>
+        </div>
+    </div>
+</body>
+</html>
