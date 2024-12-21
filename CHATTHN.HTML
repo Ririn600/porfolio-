@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Motorcycle Sales Chart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f9;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+        }
+
+        .summary, .price-summary, .monthly-revenue {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 18px;
+            color: #555;
+        }
+
+        .price-summary {
+            color: #4CAF50;
+        }
+
+        .monthly-revenue {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .revenue-box {
+            flex: 1 1 calc(25% - 10px);
+            min-width: 150px;
+            background: #e8f5e9;
+            border: 1px solid #81c784;
+            border-radius: 5px;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .revenue-box strong {
+            color: #2e7d32;
+        }
+
+        .chart {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            height: 400px;
+            padding: 20px;
+            border-bottom: 2px solid #ccc;
+            position: relative;
+        }
+
+        .chart-bar {
+            width: 50px;
+            margin: 0 5px;
+            background: linear-gradient(45deg, #4CAF50, #81C784);
+            border-radius: 5px;
+            text-align: center;
+            position: relative;
+        }
+
+        .chart-bar span {
+            position: absolute;
+            top: -25px;
+            font-size: 12px;
+            color: #333;
+        }
+
+        .chart-bar:hover {
+            transform: scale(1.1);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .labels {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            padding: 0 20px;
+            font-size: 12px;
+            color: #555;
+        }
+
+        .y-axis {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            top: 0;
+            border-left: 2px solid #ccc;
+        }
+
+        .y-axis div {
+            position: absolute;
+            left: -40px;
+            font-size: 12px;
+            color: #777;
+        }
+
+        .y-axis div:nth-child(1) { bottom: 0; }
+        .y-axis div:nth-child(2) { bottom: 20%; }
+        .y-axis div:nth-child(3) { bottom: 40%; }
+        .y-axis div:nth-child(4) { bottom: 60%; }
+        .y-axis div:nth-child(5) { bottom: 80%; }
+        .y-axis div:nth-child(6) { bottom: 100%; }
+
+        .change {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 16px;
+            color: #4CAF50;
+        }
+
+        .change span {
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Monthly Motorcycle Sales (2023 - 2024)</h1>
+        <div class="summary">
+            <p>Total Sales in 2023: <strong>38,500 units</strong></p>
+            <p>Total Sales in 2024: <strong>42,000 units</strong></p>
+            <p>Overall Increase: <strong>+9.1%</strong></p>
+        </div>
+        <div class="price-summary">
+            <p>Average Price per Unit: <strong>20 - 50 million IDR</strong></p>
+            <p>Total Revenue in 2023: <strong>Approx. 1.155 - 1.925 trillion IDR</strong></p>
+            <p>Total Revenue in 2024: <strong>Approx. 1.26 - 2.1 trillion IDR</strong></p>
+        </div>
+        <div class="monthly-revenue">
+            <div class="revenue-box"><strong>January:</strong> 60 - 150 billion IDR</div>
+            <div class="revenue-box"><strong>February:</strong> 50 - 125 billion IDR</div>
+            <div class="revenue-box"><strong>March:</strong> 40 - 100 billion IDR</div>
+            <div class="revenue-box"><strong>April:</strong> 55 - 137.5 billion IDR</div>
+            <div class="revenue-box"><strong>May:</strong> 60 - 150 billion IDR</div>
+            <div class="revenue-box"><strong>June:</strong> 70 - 175 billion IDR</div>
+            <div class="revenue-box"><strong>July:</strong> 75 - 187.5 billion IDR</div>
+            <div class="revenue-box"><strong>August:</strong> 85 - 212.5 billion IDR</div>
+            <div class="revenue-box"><strong>September:</strong> 70 - 175 billion IDR</div>
+            <div class="revenue-box"><strong>October:</strong> 65 - 162.5 billion IDR</div>
+            <div class="revenue-box"><strong>November:</strong> 55 - 137.5 billion IDR</div>
+            <div class="revenue-box"><strong>December:</strong> 50 - 125 billion IDR</div>
+        </div>
+        <div class="chart">
+            <div class="y-axis">
+                <div>5000</div>
+                <div>4000</div>
+                <div>3000</div>
+                <div>2000</div>
+                <div>1000</div>
+                <div>0</div>
+            </div>
+            <!-- Monthly Sales Data for 2023 -->
+            <div class="chart-bar" style="height: 60%;"><span>3000</span></div>
+            <div class="chart-bar" style="height: 50%;"><span>2500</span></div>
+            <div class="chart-bar" style="height: 40%;"><span>2000</span></div>
+            <div class="chart-bar" style="height: 55%;"><span>2750</span></div>
+            <div class="chart-bar" style="height: 60%;"><span>3000</span></div>
+            <div class="chart-bar" style="height: 70%;"><span>3500</span></div>
+            <div class="chart-bar" style="height: 75%;"><span>3750</span></div>
+            <div class="chart-bar" style="height: 85%;"><span>4250</span></div>
+            <div class="chart-bar" style="height: 70%;"><span>3500</span></div>
+            <div class="chart-bar" style="height: 65%;"><span>3250</span></div>
+            <div class="chart-bar" style="height: 55%;"><span>2750</span></div>
+            <div class="chart-bar" style="height: 50%;"><span>2500</span></div>
+        </div>
+        <div class="labels">
+            <div>Jan</div>
+            <div>Feb</div>
+            <div>Mar</div>
+            <div>Apr</div>
+            <div>May</div>
+            <div>Jun</
